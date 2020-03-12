@@ -1,0 +1,33 @@
+.top-row {
+    margin-left: 0px;
+}
+
+.high-scores {
+    float: left;
+    margin-left: 0px;
+}
+.timer {
+    float: right;
+}
+.card-body {
+    text-align: center;
+}
+
+.questions {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 0.5in;
+}
+
+.buttonAnswers {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.col-form-label {
+    margin-right: 10px;
+}
+
+.submit-button {
+    margin-left: 20px;
+}
