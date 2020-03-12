@@ -12,3 +12,14 @@
 .card-body {
     text-align: center;
 }
+
+.questions {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 0.5in;
+}
+
+.buttonAnswers {
+    float: left;
+    margin-bottom: 30px;
+}
