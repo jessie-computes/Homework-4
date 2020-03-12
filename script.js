@@ -333,10 +333,65 @@ function questionFive(){
             cardBody.removeChild(divTwo);
             cardBody.removeChild(divThree);
             cardBody.removeChild(divFour);
-            questionTwo();
+            allDone();
         });
-    };    
-}
+    };
+        
+};
+
+function allDone(){
+
+    var doneHeading = document.createElement("h1");
+    doneHeading.textContent = "All done!";
+    cardBody.appendChild(doneHeading);
+
+    var finalScore = document.createElement("p");
+    finalScore.textContent = "Your final score is " + totalScore;
+    cardBody.appendChild(finalScore);
+
+    var initialDiv = document.createElement("div");
+    initialDiv.classList.add("form-group", "row"); 
+    
+    var initialLabel = document.createElement("label");
+    initialLabel.classList.add("col-form-label");
+    initialLabel.textContent = "Enter initials: ";
+
+    var initialInput = document.createElement("input");
+
+    var inputButton = document.createElement("button");
+    inputButton.textContent = "Submit";
+    inputButton.classList.add("btn", "btn-primary", "submit-button");
+    
+    initialDiv.appendChild(initialLabel);
+    initialDiv.appendChild(initialInput);
+    initialDiv.appendChild(inputButton);
+    cardBody.appendChild(initialDiv);
+
+    inputButton.addEventListener("click", function(event){
+        event.preventDefault();
+        var initials = initialInput.value;
+        localStorage.setItem("initials", initials);
+        localStorage.setItem("totalScore", totalScore);
+        cardBody.removeChild(doneHeading);
+        cardBody.removeChild(finalScore);
+        cardBody.removeChild(initialDiv);
+        highScore();
+    });
+    
+
+};
+
+
+function highScore(){
+    var highScoreHead = document.createElement("h1");
+    highScoreHead.textContent = "High Scores";
+
+    cardBody.appendChild(highScoreHead);
+    
+    var scoreRow = document.createElement("div");
+    scoreRow.classList.add("row");
+    
+};
 
 
 
