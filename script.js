@@ -390,7 +390,14 @@ function highScore(){
     
     var scoreRow = document.createElement("div");
     scoreRow.classList.add("row");
-    
+
+    initials = localStorage.getItem("initials");
+    score = localStorage.getItem("totalScore");
+
+    initalsAndScore = document.createElement("p");
+    initalsAndScore.textContent = initials + " - " + score;
+    scoreRow.appendChild(initalsAndScore);
+    cardBody.appendChild(scoreRow);
 };
 
 
